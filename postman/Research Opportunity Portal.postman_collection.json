@@ -1,0 +1,241 @@
+{
+  "info": {
+    "_postman_id": "413c0443-1ef4-4421-8634-f900de7f7459",
+    "name": "Research Opportunity Portal",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58581495",
+    "_collection_link": "https://go.postman.co/collection/58581495-413c0443-1ef4-4421-8634-f900de7f7459?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create opportunity 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"AI in Healthcare\",\r\n  \"description\": \"Research on ML models for disease detection\",\r\n  \"research_area\": \"Artificial Intelligence\",\r\n  \"required_skills\": \"Python, TensorFlow\",\r\n  \"available_positions\": 2,\r\n  \"application_deadline\": \"2026-09-27\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create opportunity 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Blockchain for Supply Chain\",\r\n  \"description\": \"Research on distributed ledger for supply chain traceability\",\r\n  \"research_area\": \"Blockchain\",\r\n  \"required_skills\": \"Solidity, JavaScript\",\r\n  \"available_positions\": 1,\r\n  \"application_deadline\": \"2026-09-27\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create opportunity 3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"5G Network Optimization\",\r\n  \"description\": \"Research on latency reduction in 5G networks\",\r\n  \"research_area\": \"Networking\",\r\n  \"required_skills\": \"Python, MATLAB\",\r\n  \"available_positions\": 3,\r\n  \"application_deadline\": \"2026-09-27\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET all opportunities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET 1 opportunity",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update + close",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"AI in Healthcare (Updated)\",\r\n  \"description\": \"Updated description with new research focus\",\r\n  \"research_area\": \"Artificial Intelligence\",\r\n  \"required_skills\": \"Python, PyTorch\",\r\n  \"available_positions\": 3,\r\n  \"application_deadline\": \"2026-09-27\",\r\n  \"status\": \"Closed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "validation error",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Only title\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "After delete",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/opportunities/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "opportunities",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
