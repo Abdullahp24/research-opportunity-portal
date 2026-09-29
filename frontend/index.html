@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Opportunity Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Research Opportunity Portal</h1>
+    <p>Discover and manage research opportunities</p>
+  </header>
+
+  <main>
+    <!-- Message banner for success/error feedback -->
+    <div id="message" class="message hidden"></div>
+
+    <!-- Form section: used for both Create and Update -->
+    <section class="card">
+      <h2 id="form-title">Post New Opportunity</h2>
+
+      <form id="opportunity-form">
+        <input type="hidden" id="opportunity-id">
+
+        <label for="title">Research Title *</label>
+        <input type="text" id="title" placeholder="e.g., AI in Healthcare" required>
+
+        <label for="description">Description *</label>
+        <textarea id="description" rows="3" placeholder="Describe the research..." required></textarea>
+
+        <label for="research_area">Research Area *</label>
+        <input type="text" id="research_area" placeholder="e.g., Artificial Intelligence" required>
+
+        <label for="required_skills">Required Skills</label>
+        <input type="text" id="required_skills" placeholder="e.g., Python, TensorFlow">
+
+        <label for="available_positions">Available Positions</label>
+        <input type="number" id="available_positions" min="1" value="1">
+
+        <label for="application_deadline">Application Deadline</label>
+        <input type="date" id="application_deadline">
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="Open">Open</option>
+          <option value="Closed">Closed</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn">Create Opportunity</button>
+          <button type="button" id="cancel-btn" class="secondary hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- List section: displays all opportunities -->
+    <section class="card">
+      <h2>All Opportunities</h2>
+      <div id="opportunities-list">
+        <p class="loading">Loading...</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
